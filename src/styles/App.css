@@ -1,0 +1,23 @@
+/* App.css or global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensure padding and border don't cause overflow */
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    overflow-x: hidden; /* Hide the horizontal scrollbar */
+    background-color: #fdfdfd;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* Optional: You can also apply it to specific containers if needed 
+  .container {
+    overflow-x: hidden;
+  }*/
+ 
+
+
+

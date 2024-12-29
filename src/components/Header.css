@@ -1,0 +1,91 @@
+/* General Header Styling */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space between logo and title */
+  padding: 10px 280px;
+  background-color:#f5f5f5;
+  color: rgba(16, 17, 17, 0);
+  flex-wrap: wrap; /* Allows wrapping for smaller screens */
+}
+
+/* Logo Styling */
+.logo {
+  width: 90px;
+  height: 80px;
+  border-radius: 50%; /* Makes the logo round */
+  object-fit: cover; /* Ensures the image fits within the round shape */
+  transition: all 0.8s ease-in-out;
+  filter: drop-shadow(0 0 5px rgba(83, 30, 241, 0.8)); /* Glow effect */
+}
+
+.logo.highlighted {
+  transform: scale(1.2); /* Highlight with scale-up */
+  filter: drop-shadow(0 0 15px rgb(44, 75, 213)); /* Intense glow */
+}
+
+/* Title Container */
+.title-container {
+  text-align: left; /* Centers title for smaller screens */
+  flex: 1; /* Ensures it takes up the remaining space */
+  margin-left: 50px;
+}
+
+/* Title Text */
+.header-title {
+  font-size: 2rem; /* Larger font size for desktop */
+  font-weight: bold;
+}
+
+/* Typing Effect */
+.typing-text {
+  color: #004080;
+  font-size: 35px;
+  display: inline-block;
+  overflow: hidden; /* Hides overflowing text during typing animation */
+  white-space: nowrap; /* Prevents text wrapping */
+  border-right: 3px solid #004080; /* Simulates a blinking cursor */
+  animation: typing 3s steps(30, end), blink 0.7s step-end infinite;
+}
+
+/* Typing Animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%; /* Adjust to fit full text width */
+  }
+}
+
+/* Blinking Cursor Animation */
+@keyframes blink {
+  50% {
+    border-color: transparent; /* Makes the cursor disappear */
+  }
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column; /* Stack logo and title vertically */
+    text-align: center;
+    padding: 15px;
+  }
+
+  .logo {
+    width: 60px; /* Smaller logo size */
+    height: 60px;
+  }
+
+  .header-title {
+    font-size: 1.5rem; /* Smaller title size for mobile */
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-title {
+    font-size: 1.2rem; /* Further reduced title size for very small screens */
+  }
+}

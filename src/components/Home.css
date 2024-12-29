@@ -1,0 +1,193 @@
+/* General Container Styling */
+.container {
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+  background-color: #d7dfe3;
+  color: #718cfa;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Titles Container */
+.titles-container {
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.titles-container h1 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #004080;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 10px;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.titles-container h1::after {
+  content: '';
+  position: absolute;
+  width: 80%;
+  height: 3px;
+  background: linear-gradient(to right, #004080, #00aaff);
+  bottom: -5px;
+  left: 0%;
+  animation: underline 1s infinite alternate ease-in-out;
+}
+
+/* IT Department Section */
+.it-department-section {
+  margin-bottom: 40px;
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 5px 5px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  animation: slideIn 1.5s ease-in-out;
+  width: 100%;
+  max-width: 1200px;
+  transition: transform 0.4s ease-in-out;
+}
+
+.it-department-section:hover {
+  transform: translateY(-10px);
+}
+
+.it-department-box {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.it-department-image {
+  flex: 1;
+  max-width: 350px;
+  border-radius: 10px;
+  box-shadow: 0 2px 20px rgba(20, 20, 20, 0.5);
+  transition: transform 0.3s ease-in-out;
+}
+
+.it-department-image:hover {
+  transform: scale(1.1) rotateX(20deg);
+}
+
+.it-department-text-content {
+  flex: 2;
+}
+
+.it-department-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+/* Announcement Section */
+.announcement-container {
+  margin-bottom: 40px;
+  background: #ffffff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+  animation: slideIn 1.5s ease-in-out;
+}
+
+.announcement-box {
+  padding: 5px;
+}
+
+.announcement-item {
+  background: linear-gradient(to right, #004080, #00aaff);
+  color: #fff;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  font-size: 20px;
+  animation: fadeInUp 1.5s ease-in-out, glow 2s infinite alternate;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.announcement-item:hover {
+  transform: scale(1.05) rotateX(5deg);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.announcement-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes underline {
+  from {
+    width: 90%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px rgba(0, 170, 255, 0.5);
+  }
+  to {
+    box-shadow: 0 0 20px rgba(0, 170, 255, 1);
+  }
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .it-department-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .announcement-item {
+    font-size: 0.9rem;
+  }
+
+  .announcement-box {
+    padding: 10px;
+  }
+}

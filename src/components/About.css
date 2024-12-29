@@ -1,0 +1,82 @@
+/* About Department Section Styling */
+.about-department-section {
+    margin-bottom: 40px;
+    padding: 20px 20px;
+    background-color: #ffffff;
+    box-shadow: 5px 5px 40px rgba(226, 224, 224, 0.1);
+    border-radius: 8px;
+    animation: slideIn 1.5s ease-in-out;
+    width: 600px;
+    height: 100px;
+    
+  }
+  
+  .titles-container {
+    text-align: center;
+    margin-bottom: 30px;
+
+  }
+  
+  .titles-container h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #004080;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    animation: fadeIn 1.2s ease-in-out;
+  }
+  
+  .department-description {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 30px;
+  }
+  
+  .in-charge-section {
+    background: #f4f7fa;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .in-charge-section h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #004080;
+    margin-bottom: 15px;
+  }
+  
+  .in-charge-section ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .in-charge-section li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  /* Animations */
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
